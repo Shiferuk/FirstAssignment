@@ -1,31 +1,39 @@
 public class Cinema {
     private String name;
+    private Film film;
     private String location;
-    private int seats;
-    public Cinema(String name, String location, int seats){
+    private int availableSeats;
+    public Cinema(String name, String location, Film film, int availableSeats){
         this.name = name;
+        this.film = film;
         this.location = location;
-        this.seats = seats;
+        this.availableSeats = availableSeats;
     }
-    public String getName(){
-        return name;
+
+    public int getAvailableSeats(){
+        return availableSeats;
     }
-    public void setName(String name){
-        this.name = name;
+
+    public void setAvailableSeats(int seats){
+        if (seats >= 0){
+            this.availableSeats = seats;
+        }
     }
-    public String getLocation(){
-        return location;
+
+    public double reverseTicket(User user){
+        if (availableSeats <= 0){
+            System.out.println("No seats available!");
+            return 0;
+        }
+        availableSeats--;
+        double discount = user.discountStudent();
+        double final_price = film.getprice() * (1 - discount);
+        return final_price;
     }
-    public void setLocation(String location){
-        this.location = location;
-    }
-    public int getSeats(){
-        return seats;
-    }
-    public void setSeats(int seats){
-        this.seats = seats;
-    }
+
+
+
     public void printCinemaInfo(){
-        System.out.println("Cinema: " + name + " | Location: " + location + " | Total seats: " + seats);
+        System.out.println("Cinema: " + name + " | Location: " + location + " | Film: " + film.getTitle() + " | Seats: " + availableSeats);
     }
 }
