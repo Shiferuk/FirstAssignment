@@ -1,8 +1,8 @@
-public class Cinema extends Entity{
+public class Cinema extends EntityCinema {
     private String address;
 
-    public Cinema(int ID, String name, String address){
-        super(ID, name);
+    public Cinema(String name, String address){
+        super(name);
         this.address = address;
     }
 
@@ -12,6 +12,6 @@ public class Cinema extends Entity{
 
     @Override
     public String toString(){
-        return super.toString() + "," + address;
+        return super.toString() + ", " + address;
     }
 }

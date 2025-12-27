@@ -23,17 +23,17 @@ public class DataPool {
         return films;
     }
 
-    public Film findFilmByID(int ID){
+    public Film findFilmByID(int id){
         for (Film f : getFilms()){
-            if (f.getID() == ID){
+            if (f.getID() == id){
                 return f;
             }
         }
         return null;
     }
-    public Cinema findCinemaByID(int ID){
+    public Cinema findCinemaByID(int id){
         for (Cinema c : getCinemas()){
-            if (c.getID() == ID){
+            if (c.getID() == id){
                 return c;
             }
         }
@@ -42,7 +42,7 @@ public class DataPool {
 
     public Film findFilmByTitle(String title) {
         for (Film film : films) {
-            if (film.getName().equalsIgnoreCase(title)) {
+            if (film.getTitle().equalsIgnoreCase(title)) {
                 return film;
             }
         }

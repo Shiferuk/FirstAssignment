@@ -1,8 +1,8 @@
-public class User extends Entity{
+public class User extends EntityUser {
     private int age;
 
-    public User(int ID, String name, int age){
-        super(ID, name);
+    public User(String name, int age){
+        super(name);
         this.age = age;
     }
 

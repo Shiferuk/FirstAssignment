@@ -1,9 +1,10 @@
-public class Entity {
-    private int ID;
-    private String name;
+public class EntityCinema {
+    protected int ID;
+    protected String name;
+    protected static int counter = 1;
 
-    public Entity(int ID, String name){
-        this.ID = ID;
+    public EntityCinema(String name){
+        this.ID = this.counter++;
         this.name = name;
     }
 
