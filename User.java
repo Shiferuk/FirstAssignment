@@ -1,39 +1,17 @@
-public class User {
-    private String name;
+public class User extends Entity{
     private int age;
-    private boolean student;
 
-    public User(String name, int age, boolean student){
-        this.name = name;
+    public User(int ID, String name, int age){
+        super(ID, name);
         this.age = age;
-        this.student = student;
     }
 
-    public String get_Name(){
-        return name;
-    }
-    public int get_Age(){
+    public int getAge(){
         return age;
     }
-    public boolean isStudent(){
-        return student;
-    }
 
-    public void setStudent(boolean student){
-        this.student = student;
-    }
-
-    public double discountStudent(){
-        if (student){
-            return 0.2;
-        }
-        if (age < 12){
-            return 0.3;
-        }
-        return 0.0;
-    }
-
-    public void printUserInfo(){
-        System.out.println("User: " + name + " | Age: " + age + " | Student: " + student);
+    @Override
+    public String toString(){
+        return super.toString() + " Age: " + age;
     }
 }

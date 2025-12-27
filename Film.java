@@ -1,43 +1,34 @@
-public class Film {
-    private String title;
-    private String genre;
+public class Film extends Entity {
     private int Film_duration;
-    private double price;
+    private String genre;
+    private int price;
 
-    public Film(String title, String genre, int Film_duration, double price){
-        this.title = title;
+    public Film(int ID, String title, int Film_duration, String genre, int price){
+        super(ID, title);
+        this.Film_duration = Film_duration;
         this.genre = genre;
         this.price = price;
-        this.Film_duration = Film_duration;
     }
-    public String getTitle(){
-        return title;
+
+    public int getFilm_duration(){
+        return Film_duration;
     }
     public String getGenre(){
         return genre;
     }
-    public int getFilm_duration(){
-        return Film_duration;
-    }
-    public double getprice(){
+    public int getPrice(){
         return price;
     }
 
     public void setGenre(String genre){
         this.genre = genre;
     }
-    public void setTitle(String title){
-        this.title = title;
-    }
     public void setFilm_duration(int Film_duration){
         this.Film_duration = Film_duration;
     }
-    public void setprice(double price){
-        this.price = price;
-    }
 
-    public void printFilmInfo(){
-
-        System.out.println("Film: " + title + " | Genre: " + genre + " | Duration: " + Film_duration + "min | Price: " + price);
+    @Override
+    public String toString(){
+        return super.toString() + " | " + Film_duration + "min | Genre: " + genre + " | Price: " + price;
     }
 }
