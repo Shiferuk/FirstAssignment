@@ -14,4 +14,5 @@ public class User extends EntityUser {
     public String toString(){
         return super.toString() + " Age: " + age;
     }
+
 }

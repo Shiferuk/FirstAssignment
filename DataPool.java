@@ -1,10 +1,8 @@
 import java.util.*;
-
 public class DataPool {
     private List<Cinema> cinemas = new ArrayList<>();
     private List<Film> films = new ArrayList<>();
     private List<User> users = new ArrayList<>();
-    //private Set<Ticket> tickets = new HashSet<>();
 
     public void addCinema(Cinema cinema) {
         cinemas.add(cinema);

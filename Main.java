@@ -1,6 +1,11 @@
 public class Main {
     public static void main(String[] array){
         DataPool dataPool = new DataPool();
+
+        Student student = new Student("Ali", 20);
+        StudentDAO dao = new StudentDAO();
+        dao.addStudent(student);
+
         dataPool.addFilm(new Film("Brothers", 105, "psychological-drama", 2000));
         dataPool.addFilm(new Film("Zootopia 2", 108,"Cartoon", 1800));
         dataPool.addFilm(new Film("Five Nights at Fredy 2", 104, "Horror", 2700));
@@ -24,7 +29,7 @@ public class Main {
         System.out.println("--------------------------------------------------------------------");
         dataPool.getCinemas().forEach(System.out::println);*/
 
-        System.out.println("--------------------------------------------------------------------");
+        /*System.out.println("--------------------------------------------------------------------");
         System.out.println(dataPool.findFilmByID(6));
         System.out.println("--------------------------------------------------------------------");
         System.out.println(dataPool.findCinemaByID(3));
@@ -33,8 +38,12 @@ public class Main {
         System.out.println(dataPool.findFilmByTitle("Brothers"));
         System.out.println("--------------------------------------------------------------------");
         System.out.println("Поиск по жанру:");
-        dataPool.filterFilmByGenre("Science fiction").forEach(System.out::println);
+        dataPool.filterFilmByGenre("Science fiction").forEach(System.out::println);*/
 
+        System.out.println(dataPool.findFilmByID(6).equals(dataPool.findFilmByID(5)));
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println(dataPool.getFilms().hashCode());
+        System.out.println("--------------------------------------------------------------------");
         System.out.println("Фильмы дешевле 2222:");
         dataPool.filterFilmsByPrice(2222).forEach(System.out::println);
         System.out.println("--------------------------------------------------------------------");

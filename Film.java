@@ -1,3 +1,7 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class Film extends EntityFilm {
     private int Film_duration;
     private String genre;
@@ -30,5 +34,8 @@ public class Film extends EntityFilm {
     @Override
     public String toString(){
         return super.toString() + " | " + Film_duration + "min | Genre: " + genre + " | Price: " + price;
+    }
+    public int hashCode() {
+        return title.hashCode();
     }
 }
