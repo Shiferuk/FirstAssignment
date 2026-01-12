@@ -1,19 +1,4 @@
-import java.util.*;
-public class DataPool {
-    private List<Cinema> cinemas = new ArrayList<>();
-    private List<Film> films = new ArrayList<>();
-    private List<User> users = new ArrayList<>();
-
-    public void addCinema(Cinema cinema) {
-        cinemas.add(cinema);
-    }
-    public void addFilm(Film film) {
-        films.add(film);
-    }
-    public void addUser(User user) {
-        users.add(user);
-    }
-
+/*import java.util.*;
     public List<Cinema> getCinemas() {
         return cinemas;
     }
@@ -21,27 +6,10 @@ public class DataPool {
         return films;
     }
 
-    public Film findFilmByID(int id){
-        for (Film f : getFilms()){
-            if (f.getID() == id){
-                return f;
-            }
-        }
-        return null;
-    }
     public Cinema findCinemaByID(int id){
         for (Cinema c : getCinemas()){
             if (c.getID() == id){
                 return c;
-            }
-        }
-        return null;
-    }
-
-    public Film findFilmByTitle(String title) {
-        for (Film film : films) {
-            if (film.getTitle().equalsIgnoreCase(title)) {
-                return film;
             }
         }
         return null;
@@ -71,5 +39,5 @@ public class DataPool {
         List<Film> sorted = new ArrayList<>(films);
         sorted.sort(Comparator.comparingDouble(Film::getPrice));
         return sorted;
-    }
-}
+    }*/
+

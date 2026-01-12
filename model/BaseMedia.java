@@ -1,16 +1,12 @@
-public class EntityFilm {
-    protected int ID;
-    protected String title;
-    protected static int counter = 1;
+package model;
 
-    public EntityFilm(String title){
-        this.ID = counter++;
+public abstract class BaseMedia {
+    protected String title;
+
+    public BaseMedia(String title){
         this.title = title;
     }
 
-    public int getID(){
-        return ID;
-    }
     public String getTitle(){
         return title;
     }
@@ -18,8 +14,8 @@ public class EntityFilm {
         this.title = title;
     }
 
-    @Override
+    /*@Override
     public String toString(){
         return "Name: " + title + " (ID = " + ID + ") ";
-    }
+    }*/
 }
